@@ -225,6 +225,21 @@
     color: #FFFFFF !important;
 }
 
+/*** Materials ***/
+.material-item{
+    /*height: 320px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: #f80000;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+/** Materials END **/
+
+
 /*** Youtube Video ***/
 
 .video {
