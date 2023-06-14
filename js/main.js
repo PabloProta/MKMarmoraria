@@ -1,6 +1,16 @@
 (function($) {
     "use strict";
 
+    $('.slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
+        prevArrow:"<button type='button' class='slick-prev pull-left'><i class='bi bi-arrow-left' aria-hidden='true'></i></button>",
+        nextArrow:"<button type='button' class='slick-next pull-right'><i class='bi bi-arrow-right' aria-hidden='true'></i></button>"
+      });
+
     // Spinner
     var spinner = function() {
         setTimeout(function() {
@@ -84,27 +94,25 @@
         })
     });
 
-
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        margin: 25,
-        dots: false,
-        loop: true,
-        nav: true,
-        navText: [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ],
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 2
-            }
+ // Testimonials carousel
+ $(".testimonial-carousel").owlCarousel({
+    autoplay: true,
+    smartSpeed: 1000,
+    margin: 25,
+    dots: false,
+    loop: true,
+    nav: true,
+    navText: [
+        '<i class="bi bi-arrow-left"></i>',
+        '<i class="bi bi-arrow-right"></i>'
+    ],
+    responsive: {
+        0: {
+            items: 1
+        },
+        768: {
+            items: 2
         }
-    });
-
+    }
+});
 })(jQuery);

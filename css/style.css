@@ -227,7 +227,7 @@
 
 /*** Materials ***/
 .material-item{
-    /*height: 320px;*/
+    width: 14vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -236,6 +236,16 @@
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
     transition: .5s;
 }
+
+.carousel-item {
+    transition: none !important;
+  }
+
+.slick-next:before, .slick-prev:before{
+    color: #000 !important;
+    font-size: 20px;
+}
+  
 
 /** Materials END **/
 
