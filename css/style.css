@@ -237,6 +237,10 @@
     transition: .5s;
 }
 
+.title-material{
+    margin-top: 60px;
+}
+
 .carousel-item {
     transition: none !important;
   }
@@ -245,7 +249,7 @@
     color: #000 !important;
     font-size: 20px;
 }
-  
+
 
 /** Materials END **/
 

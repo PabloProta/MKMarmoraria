@@ -4,11 +4,11 @@
     $('.slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         arrows: true,
-        prevArrow:"<button type='button' class='slick-prev pull-left'><i class='bi bi-arrow-left' aria-hidden='true'></i></button>",
-        nextArrow:"<button type='button' class='slick-next pull-right'><i class='bi bi-arrow-right' aria-hidden='true'></i></button>"
+        prevArrow:"<button type='button' class='slick-prev'><i class='bi bi-arrow-left' aria-hidden='true'></i></button>",
+        nextArrow:"<button type='button' class='slick-next'><i class='bi bi-arrow-right' aria-hidden='true'></i></button>"
       });
 
     // Spinner
