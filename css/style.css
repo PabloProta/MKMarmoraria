@@ -121,18 +121,6 @@
     height: 3rem;
 }
 
-@media (max-width: 768px) {
-    #header-carousel .carousel-item {
-        position: relative;
-        min-height: 450px;
-    }
-    #header-carousel .carousel-item img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
 
 .page-header {
     background-position: center center;
@@ -238,7 +226,7 @@
 }
 
 .title-material{
-    margin-top: 60px;
+    margin-top: 82px;
 }
 
 .carousel-item {
@@ -250,6 +238,25 @@
     font-size: 20px;
 }
 
+
+.p-2 .wow{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.justify-content-around{
+    align-items: flex-end !important;
+}
+
+.fw-light{
+    width: 14vw !important;
+}
+
+h4, .h4 {
+    font-size: 19px !important;
+}
 
 /** Materials END **/
 
@@ -516,4 +523,50 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+.p-2 {
+    height: 38vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    min-height: 214px;
+}
+
+
+.navbar-toggler{
+    background-color: black;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+    .p-2 {
+        height: 33vh !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    h4, .h4 {
+        font-size: 13px !important;
+    }
+    .p-2 {
+        height: 26vh !important;
+        min-height: 150px !important;
+    }
 }

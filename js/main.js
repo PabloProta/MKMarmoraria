@@ -1,6 +1,58 @@
 (function($) {
     "use strict";
 
+    const loadImages = (url, containerId, itemsPerSlide = 8) => {
+        fetch(url)
+            .then(response => response.json())
+            .then(marmores => {
+                const container = document.getElementById(containerId);
+                let slideHTML = '';
+                let itemsInSlide = 0;
+    
+                marmores.forEach((item, index) => {
+                    // Inicie um novo slide se necessário
+                    if (itemsInSlide === 0) {
+                        slideHTML += '<div class="d-flex justify-content-around">';
+                    }
+    
+                    // Adicione o item ao slide
+                    slideHTML += `
+                        <div class="p-2">
+                            <div class="wow fadeInUp" data-wow-delay="0.6s">
+                                <h4 class="fw-light">${item.title}</h4>
+                                <img class="material-item rounded ratio ratio-1x1" src="${item.url}" alt="${item.title}"></img>
+                            </div>
+                        </div>
+                    `;
+    
+                    itemsInSlide++;
+    
+                    // Feche o slide se ele estiver cheio ou se este for o último item
+                    if (itemsInSlide === itemsPerSlide || index === marmores.length - 1) {
+                        slideHTML += '</div>';
+                        container.innerHTML += slideHTML;
+                        slideHTML = '';
+                        itemsInSlide = 0;
+                    }
+                });
+    
+                // Inicialize o Slick Slider
+                $(document).ready(function(){
+                    $('#marmore-container').slick();
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    };
+    
+    loadImages('marmore.json', 'marmore-container');
+    
+    
+
+// Inicialize o Slick Slider
+$(document).ready(function(){
+    $('#marmore-container').slick();
+});
+
     $('.slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
