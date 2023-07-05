@@ -529,7 +529,7 @@ h4, .h4 {
 }
 
 .p-2 {
-    height: 38vh !important;
+    height: 45vh !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
